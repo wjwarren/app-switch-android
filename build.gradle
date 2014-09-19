@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:0.11.+"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "1.11"
+}
+
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+
+    sourceSets {
+        main {
+            manifest {
+                srcFile "main/AndroidManifest.xml"
+            }
+            java {
+                srcDir "main/src"
+            }
+            res {
+                srcDir "main/res"
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // json-simple
+    compile group: "com.googlecode.json-simple", name: "json-simple", version: "1.1"
+}
