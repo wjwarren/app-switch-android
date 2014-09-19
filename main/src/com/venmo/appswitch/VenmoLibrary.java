@@ -1,4 +1,4 @@
-package com.venmo.demo; //Replace this with the name of your package 
+package com.venmo.appswitch;
 
 import java.io.*;
 import java.net.URLEncoder;

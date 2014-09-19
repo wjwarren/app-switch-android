@@ -1,4 +1,4 @@
-package com.venmo.demo; //Replace this with your package name
+package com.venmo.appswitch;
 
 import android.app.Activity;
 import android.content.Context;
